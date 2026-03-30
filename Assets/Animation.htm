@@ -1,0 +1,108 @@
+<div id="splash">
+
+    <div class="bg"></div>
+
+    <div class="container">
+
+        <!-- TITLE -->
+        <div class="title">
+            <span>C</span>
+            <span>A</span>
+            <span>L</span>
+            <span>C</span>
+            <span>U</span>
+            <span>L</span>
+            <span>A</span>
+            <span>T</span>
+            <span>O</span>
+            <span>R</span>
+        </div>
+
+        <!-- AUTHOR -->
+        <div class="author">
+            BY AMAN KASHYAP - 27921
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+
+/* FULL OVERLAY */
+#splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* BACKGROUND ANIMATION */
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
+    background-size: 800% 800%;
+    animation: bgMove 10s infinite;
+}
+
+@keyframes bgMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* CENTER CONTENT */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* TITLE */
+.title span {
+    font-size: 50px;
+    font-weight: bold;
+    display: inline-block;
+    animation: pop 1s ease infinite alternate;
+}
+
+/* MULTI COLORS */
+.title span:nth-child(1) { color: #ff3c3c; }
+.title span:nth-child(2) { color: #ff9933; }
+.title span:nth-child(3) { color: #ffd700; }
+.title span:nth-child(4) { color: #33cc33; }
+.title span:nth-child(5) { color: #00ccff; }
+.title span:nth-child(6) { color: #3366ff; }
+.title span:nth-child(7) { color: #9933ff; }
+.title span:nth-child(8) { color: #ff3399; }
+.title span:nth-child(9) { color: #ff6633; }
+.title span:nth-child(10){ color: #66ffcc; }
+
+/* LETTER ANIMATION */
+@keyframes pop {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-12px); }
+}
+
+/* AUTHOR */
+.author {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    animation: colorShift 3s infinite;
+}
+
+@keyframes colorShift {
+    0% { color: #fff; }
+    50% { color: #ffd700; }
+    100% { color: #00ffff; }
+}
+
+</style>
